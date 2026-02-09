@@ -1,50 +1,160 @@
-const firmas = {
-  ernesto: {
-    desktop: `
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-  <tr>
-    <td style="padding:15px 5px 0 0;">
-      <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200">
-    </td>
-    <td>
-      <table style="font-family:Arial,Helvetica,sans-serif;font-size:90%;">
-        <tr><td><b>ERNESTO BORDA MEDINA</b></td></tr>
-        <tr><td>Director Ejecutivo</td></tr>
-        <tr><td>celular: <a href="tel:+573102926035">+57 310 292 6035</a></td></tr>
-        <tr><td>web: <a href="https://www.trust.com.co">www.trust.com.co</a></td></tr>
-      </table>
-    </td>
-  </tr>
-</table>
-`,
-    mobile: `
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-  <tr>
-    <td>
-      <table style="font-family:Arial,Helvetica,sans-serif;font-size:90%;">
-        <tr><td><b>ERNESTO BORDA MEDINA</b></td></tr>
-        <tr><td>Director Ejecutivo | TRUST</td></tr>
-        <tr><td>celular: <a href="tel:+573102926035">+57 310 292 6035</a></td></tr>
-        <tr><td>web: <a href="https://www.trust.com.co">www.trust.com.co</a></td></tr>
-      </table>
-    </td>
-  </tr>
-</table>
-`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Firmas de correo | TRUST</title>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    padding: 40px;
+    color: #000;
   }
-};
 
-function cargarFirma() {
-  const p = document.getElementById("persona").value;
-  document.getElementById("firma-desktop").innerHTML = firmas[p]?.desktop || "";
-  document.getElementById("firma-mobile").innerHTML = firmas[p]?.mobile || "";
-}
+  h1 {
+    margin-bottom: 30px;
+  }
 
-function copiar(id) {
-  const range = document.createRange();
-  range.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
-  alert("Firma copiada. Pégala directamente en tu correo.");
-}
+  h2 {
+    margin-top: 50px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+  }
+
+  h3 {
+    margin-top: 25px;
+  }
+
+  .firma-wrapper {
+    background: #fff;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+  }
+
+  .firma-box {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    background: #fff;
+  }
+
+  .nota {
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Firmas de correo electrónico – TRUST</h1>
+
+<!-- ===================================================== -->
+<!-- PERSONA -->
+<!-- ===================================================== -->
+
+<h2>Ernesto Borda Medina</h2>
+
+<div class="firma-wrapper">
+
+  <h3>💻 Firma para computador</h3>
+
+  <div class="firma-box">
+    <br>
+    <table width="450" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td style="padding:15px 5px 0px 0px; vertical-align: top;">
+          <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png"
+               width="200" style="max-width:220px;" alt="TRUST">
+        </td>
+
+        <td style="padding:0px 15px 0px 0px; vertical-align: top;">
+          <table cellspacing="0" cellpadding="0" border="0"
+                 style="font-family:Arial,Helvetica,sans-serif; line-height:1.4; font-size:90%; color:#000000;">
+            <tr>
+              <td><b>ERNESTO BORDA MEDINA</b></td>
+            </tr>
+            <tr>
+              <td>Director Ejecutivo</td>
+            </tr>
+            <tr>
+              <td style="padding-top:6px;">
+                celular:&nbsp;
+                <a href="tel:+573102926035"
+                   style="color:#000000; text-decoration:none;">
+                  +57 310 292 6035
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                web:&nbsp;
+                <a href="https://www.trust.com.co"
+                   style="color:#000000; text-decoration:none;">
+                  www.trust.com.co
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="nota">Copiar directamente desde aquí y pegar en la firma del correo (Outlook / Gmail).</p>
+
+  <h3>📱 Firma para celular</h3>
+
+  <div class="firma-box">
+    <br>
+    <table width="450" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td style="padding:0px 15px 0px 20px; vertical-align: top;">
+          <table cellspacing="0" cellpadding="0" border="0"
+                 style="font-family:Arial,Helvetica,sans-serif; line-height:1.4; font-size:90%; color:#000000;">
+            <tr>
+              <td><b>ERNESTO BORDA MEDINA</b></td>
+            </tr>
+            <tr>
+              <td>Director Ejecutivo | TRUST</td>
+            </tr>
+            <tr>
+              <td style="padding-top:6px;">
+                celular:&nbsp;
+                <a href="tel:+573102926035"
+                   style="color:#000000; text-decoration:none;">
+                  +57 310 292 6035
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                web:&nbsp;
+                <a href="https://www.trust.com.co"
+                   style="color:#000000; text-decoration:none;">
+                  www.trust.com.co
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- DUPLICAR ESTE BLOQUE PARA CADA PERSONA -->
+<!-- ===================================================== -->
+
+<!--
+<h2>Nombre Apellido</h2>
+(Reemplazar datos, teléfono y cargo)
+-->
+
+</body>
+</html>
