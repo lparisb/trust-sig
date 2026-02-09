@@ -2,731 +2,1042 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<title>Firmas TRUST</title>
+<meta charset="UTF-8">
+<title>Firmas de correo TRUST</title>
+
+<style>
+body {font-family:Arial,Helvetica,sans-serif;padding:24px;background:#fafafa;color:#000;}
+h1 {text-align:center;margin-bottom:16px;}
+
+.intro {max-width:900px;margin:0 auto 40px auto;font-size:14px;line-height:1.6;color:#333;}
+
+.search-box {text-align:center;margin-bottom:50px;}
+.search-box input {
+  padding:10px 14px;
+  width:280px;
+  max-width:90%;
+  font-size:14px;
+}
+
+.persona {margin-bottom:90px;}
+.persona h2 {text-align:center;margin-bottom:35px;font-size:22px;}
+
+.bloques {display:flex;justify-content:center;gap:90px;flex-wrap:wrap;}
+.bloque {text-align:center;max-width:480px;}
+
+.subtitulo {color:#888;font-size:13px;margin-bottom:18px;}
+
+.btn {
+  margin-bottom:18px;
+  padding:8px 16px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.firma {background:#fff;padding:16px;border:1px dashed #ccc;}
+
+/* Mobile landing tweaks */
+@media (max-width: 768px) {
+  .bloques {gap:40px;}
+  .persona {margin-bottom:60px;}
+  .firma {padding:12px;}
+}
+</style>
+
+<script>
+function copySignature(id) {
+  const range = document.createRange();
+  range.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  alert('Firma copiada. Ahora péguela en la configuración de firmas de su correo.');
+}
+
+function filtrarFirmas() {
+  const q = document.getElementById('buscador').value.toLowerCase();
+  document.querySelectorAll('.persona').forEach(p => {
+    p.style.display = p.dataset.name.includes(q) ? 'block' : 'none';
+  });
+}
+</script>
 </head>
-<body style="font-family:Arial,Helvetica,sans-serif;">
-<h1>Firmas oficiales TRUST</h1>
 
-<h3>Ernesto Borda Medina</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Ernesto Borda Medina</b></div></td></tr>
-<tr><td>Director Ejecutivo</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573102926035" style="color:#000;text-decoration:none;">+57 310 292 6035</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
+<body>
+
+<h1>Firmas institucionales TRUST</h1>
+
+<div class="intro">
+  <p><strong>Cómo usar estas firmas:</strong></p>
+  <ol>
+    <li>Busque su nombre usando el buscador o desplazándote.</li>
+    <li>Haga clic en <em>Copiar firma escritorio</em> o <em>Copiar firma móvil</em>.</li>
+    <li>Pegue la firma directamente en la configuración de firmas de su correo (Ajustes - Firmas - Añadir firma) (Outlook o Gmail).</li>
+    <li>Si necesita cambiar algún dato, cámbielo directamente al pegar en el correo</li>
+  </ol>
 </div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Ernesto Borda Medina</b></div></td></tr>
-<tr><td>Director Ejecutivo | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573102926035" style="color:#000;text-decoration:none;">+57 310 292 6035</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+<div class="search-box">
+  <input id="buscador" type="text" placeholder="Buscar por nombre" onkeyup="filtrarFirmas()">
 </div>
 
-<h3>María Paulina Borda</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>María Paulina Borda</b></div></td></tr>
-<tr><td>Directora Legal y Corporativa</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573184151867" style="color:#000;text-decoration:none;">+57 318 415 1867</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>María Paulina Borda</b></div></td></tr>
-<tr><td>Directora Legal y Corporativa | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573184151867" style="color:#000;text-decoration:none;">+57 318 415 1867</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+<section class="persona" data-name="ernesto borda medina">
+  <h2>Ernesto Borda Medina</h2>
 
-<h3>Carolina Borda Medina</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Carolina Borda Medina</b></div></td></tr>
-<tr><td>Directora Unidad DDHH y RSE</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573108077027" style="color:#000;text-decoration:none;">+57 310 807 7027</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+  <div class="bloques">
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Carolina Borda Medina</b></div></td></tr>
-<tr><td>Directora Unidad DDHH y RSE | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573108077027" style="color:#000;text-decoration:none;">+57 310 807 7027</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_0')">Copiar firma escritorio</button>
 
-<h3>Brenda Ardila Pineda</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Brenda Ardila Pineda</b></div></td></tr>
-<tr><td>Directora de Operaciones y Proyectos</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573007976467" style="color:#000;text-decoration:none;">+57 300 797 6467</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+      <div id="pc_0" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Ernesto Borda Medina</b></td></tr>
+                <tr><td style="text-align:left;">Director Ejecutivo</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573102926035" style="color:#000;text-decoration:none;">+57 310 292 6035</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Brenda Ardila Pineda</b></div></td></tr>
-<tr><td>Directora de Operaciones y Proyectos | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573007976467" style="color:#000;text-decoration:none;">+57 300 797 6467</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_0')">Copiar firma móvil</button>
 
-<h3>Santiago Ordóñez Puentes</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Santiago Ordóñez Puentes</b></div></td></tr>
-<tr><td>Director Data y Analítica</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573134316039" style="color:#000;text-decoration:none;">+57 313 431 6039</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+      <div id="mv_0" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Ernesto Borda Medina</b></td></tr>
+                <tr><td style="text-align:left;">Director Ejecutivo | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573102926035" style="color:#000;text-decoration:none;">+57 310 292 6035</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Santiago Ordóñez Puentes</b></div></td></tr>
-<tr><td>Director Data y Analítica | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573134316039" style="color:#000;text-decoration:none;">+57 313 431 6039</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+  </div>
+</section>
 
-<h3>Andrés Felipe Gómez Gutiérrez</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Andrés Felipe Gómez Gutiérrez</b></div></td></tr>
-<tr><td>Analista de Datos Senior</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573176991458" style="color:#000;text-decoration:none;">+57 317 699 1458</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+<section class="persona" data-name="maría paulina borda">
+  <h2>María Paulina Borda</h2>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Andrés Felipe Gómez Gutiérrez</b></div></td></tr>
-<tr><td>Analista de Datos Senior | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573176991458" style="color:#000;text-decoration:none;">+57 317 699 1458</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+  <div class="bloques">
 
-<h3>Santiago Dimaté Parada</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Santiago Dimaté Parada</b></div></td></tr>
-<tr><td>Analista</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573212393460" style="color:#000;text-decoration:none;">+57 321 239 3460</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_1')">Copiar firma escritorio</button>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Santiago Dimaté Parada</b></div></td></tr>
-<tr><td>Analista | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573212393460" style="color:#000;text-decoration:none;">+57 321 239 3460</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+      <div id="pc_1" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>María Paulina Borda</b></td></tr>
+                <tr><td style="text-align:left;">Directora Legal y Corporativa</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573184151867" style="color:#000;text-decoration:none;">+57 318 415 1867</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<h3>Maira Alejandra León</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Maira Alejandra León</b></div></td></tr>
-<tr><td>Consultora Sociopolítica</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573143810334" style="color:#000;text-decoration:none;">+57 314 381 0334</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_1')">Copiar firma móvil</button>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Maira Alejandra León</b></div></td></tr>
-<tr><td>Consultora Sociopolítica | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573143810334" style="color:#000;text-decoration:none;">+57 314 381 0334</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+      <div id="mv_1" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>María Paulina Borda</b></td></tr>
+                <tr><td style="text-align:left;">Directora Legal y Corporativa | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573184151867" style="color:#000;text-decoration:none;">+57 318 415 1867</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<h3>José De Los Santos Chacin Mestra</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>José De Los Santos Chacin Mestra</b></div></td></tr>
-<tr><td>Consultor Derechos Humanos</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573104375964" style="color:#000;text-decoration:none;">+57 310 437 5964</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+  </div>
+</section>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>José De Los Santos Chacin Mestra</b></div></td></tr>
-<tr><td>Consultor Derechos Humanos | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573104375964" style="color:#000;text-decoration:none;">+57 310 437 5964</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+<section class="persona" data-name="carolina borda medina">
+  <h2>Carolina Borda Medina</h2>
 
-<h3>Sebastián Cabrales Villalba</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Sebastián Cabrales Villalba</b></div></td></tr>
-<tr><td>Gerente de Proyecto</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573103233864" style="color:#000;text-decoration:none;">+57 310 323 3864</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+  <div class="bloques">
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Sebastián Cabrales Villalba</b></div></td></tr>
-<tr><td>Gerente de Proyecto | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573103233864" style="color:#000;text-decoration:none;">+57 310 323 3864</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_2')">Copiar firma escritorio</button>
 
-<h3>Yaneth Yamina Sierra Jusayu</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Yaneth Yamina Sierra Jusayu</b></div></td></tr>
-<tr><td>Coordinadora de Campo</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573118512689" style="color:#000;text-decoration:none;">+57 311 851 2689</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+      <div id="pc_2" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Carolina Borda Medina</b></td></tr>
+                <tr><td style="text-align:left;">Directora Unidad DDHH y RSE</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573108077027" style="color:#000;text-decoration:none;">+57 310 807 7027</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Yaneth Yamina Sierra Jusayu</b></div></td></tr>
-<tr><td>Coordinadora de Campo | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573118512689" style="color:#000;text-decoration:none;">+57 311 851 2689</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_2')">Copiar firma móvil</button>
 
-<h3>Olimpia Yanaidys Palmar Palmar</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Olimpia Yanaidys Palmar Palmar</b></div></td></tr>
-<tr><td>Coordinadora de Campo</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573133507068" style="color:#000;text-decoration:none;">+57 313 350 7068</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+      <div id="mv_2" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Carolina Borda Medina</b></td></tr>
+                <tr><td style="text-align:left;">Directora Unidad DDHH y RSE | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573108077027" style="color:#000;text-decoration:none;">+57 310 807 7027</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Olimpia Yanaidys Palmar Palmar</b></div></td></tr>
-<tr><td>Coordinadora de Campo | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573133507068" style="color:#000;text-decoration:none;">+57 313 350 7068</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+  </div>
+</section>
 
-<h3>Efrain José Palacio Henríquez</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Efrain José Palacio Henríquez</b></div></td></tr>
-<tr><td>Profesional Consulta Previa</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573108785962" style="color:#000;text-decoration:none;">+57 310 878 5962</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+<section class="persona" data-name="brenda ardila pineda">
+  <h2>Brenda Ardila Pineda</h2>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Efrain José Palacio Henríquez</b></div></td></tr>
-<tr><td>Profesional Consulta Previa | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573108785962" style="color:#000;text-decoration:none;">+57 310 878 5962</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+  <div class="bloques">
 
-<h3>Jennifer Castillo Ospino</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Jennifer Castillo Ospino</b></div></td></tr>
-<tr><td>Profesional Ambiental</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573235131020" style="color:#000;text-decoration:none;">+57 323 513 1020</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_3')">Copiar firma escritorio</button>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Jennifer Castillo Ospino</b></div></td></tr>
-<tr><td>Profesional Ambiental | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573235131020" style="color:#000;text-decoration:none;">+57 323 513 1020</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+      <div id="pc_3" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Brenda Ardila Pineda</b></td></tr>
+                <tr><td style="text-align:left;">Directora de Operaciones y Proyectos</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573007976467" style="color:#000;text-decoration:none;">+57 300 797 6467</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<h3>Juan Carlos Forero</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Juan Carlos Forero</b></div></td></tr>
-<tr><td>Asesor Intercultural</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573158898026" style="color:#000;text-decoration:none;">+57 315 889 8026</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_3')">Copiar firma móvil</button>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Juan Carlos Forero</b></div></td></tr>
-<tr><td>Asesor Intercultural | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573158898026" style="color:#000;text-decoration:none;">+57 315 889 8026</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+      <div id="mv_3" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Brenda Ardila Pineda</b></td></tr>
+                <tr><td style="text-align:left;">Directora de Operaciones y Proyectos | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573007976467" style="color:#000;text-decoration:none;">+57 300 797 6467</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<h3>Angélica Méndez</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Angélica Méndez</b></div></td></tr>
-<tr><td>Coordinadora Administrativa</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573152109399" style="color:#000;text-decoration:none;">+57 315 210 9399</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+  </div>
+</section>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Angélica Méndez</b></div></td></tr>
-<tr><td>Coordinadora Administrativa | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573152109399" style="color:#000;text-decoration:none;">+57 315 210 9399</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+<section class="persona" data-name="santiago ordóñez puentes">
+  <h2>Santiago Ordóñez Puentes</h2>
 
-<h3>Angela Amaya</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Angela Amaya</b></div></td></tr>
-<tr><td>Contadora</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573043572851" style="color:#000;text-decoration:none;">+57 304 357 2851</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+  <div class="bloques">
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Angela Amaya</b></div></td></tr>
-<tr><td>Contadora | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573043572851" style="color:#000;text-decoration:none;">+57 304 357 2851</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_4')">Copiar firma escritorio</button>
 
-<h3>Andrea Lorena Vargas</h3>
-<div style="display:flex;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
-<div>
-<h4>Firma escritorio</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:15px 5px 0px 0px;vertical-align:top;">
-<img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
-</td>
-<td style="padding:0px 15px 0px 0px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Andrea Lorena Vargas</b></div></td></tr>
-<tr><td>Auxiliar Administrativa</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573188762304" style="color:#000;text-decoration:none;">+57 318 876 2304</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
+      <div id="pc_4" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Santiago Ordóñez Puentes</b></td></tr>
+                <tr><td style="text-align:left;">Director Data y Analítica</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573134316039" style="color:#000;text-decoration:none;">+57 313 431 6039</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-<div>
-<h4>Firma móvil</h4>
-<br>
-<table width="450" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding:0px 15px 0px 20px;vertical-align:top;">
-<table cellspacing="0" cellpadding="0" border="0" style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;">
-<tr><td><div style="font-size:1.1em;font-weight:500;"><b>Andrea Lorena Vargas</b></div></td></tr>
-<tr><td>Auxiliar Administrativa | TRUST</td></tr>
-<tr><td style="padding-top:6px;">celular: <a href="tel:+573188762304" style="color:#000;text-decoration:none;">+57 318 876 2304</a></td></tr>
-<tr><td>web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</div>
-</div>
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_4')">Copiar firma móvil</button>
+
+      <div id="mv_4" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Santiago Ordóñez Puentes</b></td></tr>
+                <tr><td style="text-align:left;">Director Data y Analítica | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573134316039" style="color:#000;text-decoration:none;">+57 313 431 6039</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="andrés felipe gómez gutiérrez">
+  <h2>Andrés Felipe Gómez Gutiérrez</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_5')">Copiar firma escritorio</button>
+
+      <div id="pc_5" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Andrés Felipe Gómez Gutiérrez</b></td></tr>
+                <tr><td style="text-align:left;">Analista de Datos Senior</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573176991458" style="color:#000;text-decoration:none;">+57 317 699 1458</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_5')">Copiar firma móvil</button>
+
+      <div id="mv_5" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Andrés Felipe Gómez Gutiérrez</b></td></tr>
+                <tr><td style="text-align:left;">Analista de Datos Senior | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573176991458" style="color:#000;text-decoration:none;">+57 317 699 1458</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="santiago dimaté parada">
+  <h2>Santiago Dimaté Parada</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_6')">Copiar firma escritorio</button>
+
+      <div id="pc_6" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Santiago Dimaté Parada</b></td></tr>
+                <tr><td style="text-align:left;">Analista</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573212393460" style="color:#000;text-decoration:none;">+57 321 239 3460</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_6')">Copiar firma móvil</button>
+
+      <div id="mv_6" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Santiago Dimaté Parada</b></td></tr>
+                <tr><td style="text-align:left;">Analista | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573212393460" style="color:#000;text-decoration:none;">+57 321 239 3460</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="maira alejandra león">
+  <h2>Maira Alejandra León</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_7')">Copiar firma escritorio</button>
+
+      <div id="pc_7" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Maira Alejandra León</b></td></tr>
+                <tr><td style="text-align:left;">Consultora Sociopolítica</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573143810334" style="color:#000;text-decoration:none;">+57 314 381 0334</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_7')">Copiar firma móvil</button>
+
+      <div id="mv_7" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Maira Alejandra León</b></td></tr>
+                <tr><td style="text-align:left;">Consultora Sociopolítica | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573143810334" style="color:#000;text-decoration:none;">+57 314 381 0334</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="josé de los santos chacin mestra">
+  <h2>José De Los Santos Chacin Mestra</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_8')">Copiar firma escritorio</button>
+
+      <div id="pc_8" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>José De Los Santos Chacin Mestra</b></td></tr>
+                <tr><td style="text-align:left;">Consultor Derechos Humanos</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573104375964" style="color:#000;text-decoration:none;">+57 310 437 5964</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_8')">Copiar firma móvil</button>
+
+      <div id="mv_8" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>José De Los Santos Chacin Mestra</b></td></tr>
+                <tr><td style="text-align:left;">Consultor Derechos Humanos | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573104375964" style="color:#000;text-decoration:none;">+57 310 437 5964</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="sebastián cabrales villalba">
+  <h2>Sebastián Cabrales Villalba</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_9')">Copiar firma escritorio</button>
+
+      <div id="pc_9" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Sebastián Cabrales Villalba</b></td></tr>
+                <tr><td style="text-align:left;">Gerente de Proyecto</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573103233864" style="color:#000;text-decoration:none;">+57 310 323 3864</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_9')">Copiar firma móvil</button>
+
+      <div id="mv_9" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Sebastián Cabrales Villalba</b></td></tr>
+                <tr><td style="text-align:left;">Gerente de Proyecto | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573103233864" style="color:#000;text-decoration:none;">+57 310 323 3864</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="yaneth yamina sierra jusayu">
+  <h2>Yaneth Yamina Sierra Jusayu</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_10')">Copiar firma escritorio</button>
+
+      <div id="pc_10" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Yaneth Yamina Sierra Jusayu</b></td></tr>
+                <tr><td style="text-align:left;">Coordinadora de Campo</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573118512689" style="color:#000;text-decoration:none;">+57 311 851 2689</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_10')">Copiar firma móvil</button>
+
+      <div id="mv_10" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Yaneth Yamina Sierra Jusayu</b></td></tr>
+                <tr><td style="text-align:left;">Coordinadora de Campo | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573118512689" style="color:#000;text-decoration:none;">+57 311 851 2689</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="olimpia yanaidys palmar palmar">
+  <h2>Olimpia Yanaidys Palmar Palmar</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_11')">Copiar firma escritorio</button>
+
+      <div id="pc_11" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Olimpia Yanaidys Palmar Palmar</b></td></tr>
+                <tr><td style="text-align:left;">Coordinadora de Campo</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573133507068" style="color:#000;text-decoration:none;">+57 313 350 7068</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_11')">Copiar firma móvil</button>
+
+      <div id="mv_11" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Olimpia Yanaidys Palmar Palmar</b></td></tr>
+                <tr><td style="text-align:left;">Coordinadora de Campo | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573133507068" style="color:#000;text-decoration:none;">+57 313 350 7068</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="efrain josé palacio henríquez">
+  <h2>Efrain José Palacio Henríquez</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_12')">Copiar firma escritorio</button>
+
+      <div id="pc_12" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Efrain José Palacio Henríquez</b></td></tr>
+                <tr><td style="text-align:left;">Profesional Consulta Previa</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573108785962" style="color:#000;text-decoration:none;">+57 310 878 5962</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_12')">Copiar firma móvil</button>
+
+      <div id="mv_12" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Efrain José Palacio Henríquez</b></td></tr>
+                <tr><td style="text-align:left;">Profesional Consulta Previa | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573108785962" style="color:#000;text-decoration:none;">+57 310 878 5962</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="jennifer castillo ospino">
+  <h2>Jennifer Castillo Ospino</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_13')">Copiar firma escritorio</button>
+
+      <div id="pc_13" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Jennifer Castillo Ospino</b></td></tr>
+                <tr><td style="text-align:left;">Profesional Ambiental</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573235131020" style="color:#000;text-decoration:none;">+57 323 513 1020</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_13')">Copiar firma móvil</button>
+
+      <div id="mv_13" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Jennifer Castillo Ospino</b></td></tr>
+                <tr><td style="text-align:left;">Profesional Ambiental | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573235131020" style="color:#000;text-decoration:none;">+57 323 513 1020</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="juan carlos forero">
+  <h2>Juan Carlos Forero</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_14')">Copiar firma escritorio</button>
+
+      <div id="pc_14" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Juan Carlos Forero</b></td></tr>
+                <tr><td style="text-align:left;">Asesor Intercultural</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573158898026" style="color:#000;text-decoration:none;">+57 315 889 8026</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_14')">Copiar firma móvil</button>
+
+      <div id="mv_14" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Juan Carlos Forero</b></td></tr>
+                <tr><td style="text-align:left;">Asesor Intercultural | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573158898026" style="color:#000;text-decoration:none;">+57 315 889 8026</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="angélica méndez">
+  <h2>Angélica Méndez</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_15')">Copiar firma escritorio</button>
+
+      <div id="pc_15" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Angélica Méndez</b></td></tr>
+                <tr><td style="text-align:left;">Coordinadora Administrativa</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573152109399" style="color:#000;text-decoration:none;">+57 315 210 9399</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_15')">Copiar firma móvil</button>
+
+      <div id="mv_15" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Angélica Méndez</b></td></tr>
+                <tr><td style="text-align:left;">Coordinadora Administrativa | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573152109399" style="color:#000;text-decoration:none;">+57 315 210 9399</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="angela amaya">
+  <h2>Angela Amaya</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_16')">Copiar firma escritorio</button>
+
+      <div id="pc_16" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Angela Amaya</b></td></tr>
+                <tr><td style="text-align:left;">Contadora</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573043572851" style="color:#000;text-decoration:none;">+57 304 357 2851</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_16')">Copiar firma móvil</button>
+
+      <div id="mv_16" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Angela Amaya</b></td></tr>
+                <tr><td style="text-align:left;">Contadora | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573043572851" style="color:#000;text-decoration:none;">+57 304 357 2851</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="persona" data-name="andrea lorena vargas">
+  <h2>Andrea Lorena Vargas</h2>
+
+  <div class="bloques">
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para computador</div>
+      <button class="btn" onclick="copySignature('pc_17')">Copiar firma escritorio</button>
+
+      <div id="pc_17" class="firma">
+        <table width="450" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:15px 5px 0px 0px;vertical-align:top;">
+              <img src="https://trust.com.co/wp-content/uploads/2025/10/wplogotrust.png" width="200" style="max-width:220px;" alt="TRUST">
+            </td>
+            <td style="padding:0px 15px 0px 0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Andrea Lorena Vargas</b></td></tr>
+                <tr><td style="text-align:left;">Auxiliar Administrativa</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573188762304" style="color:#000;text-decoration:none;">+57 318 876 2304</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <div class="subtitulo">Firma para celular</div>
+      <button class="btn" onclick="copySignature('mv_17')">Copiar firma móvil</button>
+
+      <div id="mv_17" class="firma">
+        <table width="320" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="padding:0px;vertical-align:top;">
+              <table cellspacing="0" cellpadding="0" border="0"
+                     style="font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-size:90%;color:#000;text-align:left;">
+                <tr><td style="text-align:left;"><b>Andrea Lorena Vargas</b></td></tr>
+                <tr><td style="text-align:left;">Auxiliar Administrativa | TRUST</td></tr>
+                <tr><td style="padding-top:6px;text-align:left;">celular: <a href="tel:+573188762304" style="color:#000;text-decoration:none;">+57 318 876 2304</a></td></tr>
+                <tr><td style="text-align:left;">web: <a href="https://www.trust.com.co" style="color:#000;text-decoration:none;">www.trust.com.co</a></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 </body>
 </html>
+
